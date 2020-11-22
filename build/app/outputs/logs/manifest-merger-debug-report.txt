@@ -1,0 +1,202 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-19:12
+MERGED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-10:12
+MERGED from [:path_provider] C:\Users\javie\flutter_camera_app\build\path_provider\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0-beta01.aar\19d3dc2ae2e104aa43cc0fb9d73c346f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\cf50248ff027b7bb36a2693d893bafd5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0-beta01.aar\a45e6c0a70251640ef2b7c2667524867\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\13d930eab82558f1984e308e86dd755a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0-beta01.aar\bd3fe2ca152b8c27ed41b439c3b28c11\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\976d0c8337361c30dc1b7d29a64af93b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\db494e98c8c1d1cc22595173ed0cea12\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\media-1.0.0-beta01.aar\302a1c224714266d924c4cdb527b53f5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0-beta01.aar\b86f1e654277bd833b7dfc419128e807\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0-beta01.aar\fbc9d98d77750e46ec3066a0d22674f7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0-beta01.aar\8aa19debfb6f16838106503d784c39ba\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\63d6c3f5d3b59ed1989c2388c336e7f5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0-beta01.aar\a523cb2be14b812753221360c55f2f0f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0-beta01.aar\1d5cec2b975649517788523e79eeaae1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\bb0c58073401700d710c97b045c83617\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.2.0.aar\d9f58ee62fedb9545aef1814f9930069\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\157a74e7fba0b4f668385f3f62d86290\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\20f5de5d4cba8966e1efa53e15ee33ff\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\b01503dd9d99b3643b1b7f4460f167d7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4604095c6561556cf25d91e478e7441b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\8be21b094f7382e5ca700d0820a714da\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\067fef60f9bf85639fa1049a441d478b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0-beta01.aar\c14280214e2f853a0c63f08f6ffb2c97\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0-beta01.aar\8c29aaa6cabe5db48ba5857a16e19b21\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\print-1.0.0-beta01.aar\b085c762f4f6b1fe4c0da944c8e7e768\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0-beta01.aar\73ba778e583754331795f977fdc8be45\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0-beta01.aar\3e028263a8b02d99ac1a6a158a400436\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:2:5-47
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:9:5-32:19
+MERGED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-17:19
+MERGED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-17:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\bb0c58073401700d710c97b045c83617\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\bb0c58073401700d710c97b045c83617\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\8be21b094f7382e5ca700d0820a714da\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\8be21b094f7382e5ca700d0820a714da\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\bb0c58073401700d710c97b045c83617\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:11:9-43
+	android:icon
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:12:9-43
+	android:name
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:10:9-57
+activity#com.devplanet.flutter_camera_app.MainActivity
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:13:9-31:20
+	android:launchMode
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:15:13-43
+	android:hardwareAccelerated
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:18:13-47
+	android:windowSoftInputMode
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:19:13-55
+	android:configChanges
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:17:13-144
+	android:theme
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:16:13-47
+	android:name
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:14:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:24:13-26:40
+	android:value
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:26:17-37
+	android:name
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:25:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:29:27-74
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:33:5-66
+MERGED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:33:5-66
+MERGED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:33:5-66
+	android:name
+		ADDED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml:33:22-64
+uses-sdk
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+MERGED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] C:\Users\javie\flutter_camera_app\build\path_provider\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] C:\Users\javie\flutter_camera_app\build\path_provider\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0-beta01.aar\19d3dc2ae2e104aa43cc0fb9d73c346f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0-beta01.aar\19d3dc2ae2e104aa43cc0fb9d73c346f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\cf50248ff027b7bb36a2693d893bafd5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\cf50248ff027b7bb36a2693d893bafd5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0-beta01.aar\a45e6c0a70251640ef2b7c2667524867\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0-beta01.aar\a45e6c0a70251640ef2b7c2667524867\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\13d930eab82558f1984e308e86dd755a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\13d930eab82558f1984e308e86dd755a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0-beta01.aar\bd3fe2ca152b8c27ed41b439c3b28c11\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0-beta01.aar\bd3fe2ca152b8c27ed41b439c3b28c11\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\976d0c8337361c30dc1b7d29a64af93b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\976d0c8337361c30dc1b7d29a64af93b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\db494e98c8c1d1cc22595173ed0cea12\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\db494e98c8c1d1cc22595173ed0cea12\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\media-1.0.0-beta01.aar\302a1c224714266d924c4cdb527b53f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\media-1.0.0-beta01.aar\302a1c224714266d924c4cdb527b53f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0-beta01.aar\b86f1e654277bd833b7dfc419128e807\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0-beta01.aar\b86f1e654277bd833b7dfc419128e807\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0-beta01.aar\fbc9d98d77750e46ec3066a0d22674f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0-beta01.aar\fbc9d98d77750e46ec3066a0d22674f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0-beta01.aar\8aa19debfb6f16838106503d784c39ba\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0-beta01.aar\8aa19debfb6f16838106503d784c39ba\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\63d6c3f5d3b59ed1989c2388c336e7f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\63d6c3f5d3b59ed1989c2388c336e7f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0-beta01.aar\a523cb2be14b812753221360c55f2f0f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0-beta01.aar\a523cb2be14b812753221360c55f2f0f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0-beta01.aar\1d5cec2b975649517788523e79eeaae1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0-beta01.aar\1d5cec2b975649517788523e79eeaae1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\bb0c58073401700d710c97b045c83617\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\bb0c58073401700d710c97b045c83617\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.2.0.aar\d9f58ee62fedb9545aef1814f9930069\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.2.0.aar\d9f58ee62fedb9545aef1814f9930069\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\157a74e7fba0b4f668385f3f62d86290\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\157a74e7fba0b4f668385f3f62d86290\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\20f5de5d4cba8966e1efa53e15ee33ff\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\20f5de5d4cba8966e1efa53e15ee33ff\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\b01503dd9d99b3643b1b7f4460f167d7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\b01503dd9d99b3643b1b7f4460f167d7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4604095c6561556cf25d91e478e7441b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4604095c6561556cf25d91e478e7441b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\8be21b094f7382e5ca700d0820a714da\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\8be21b094f7382e5ca700d0820a714da\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\067fef60f9bf85639fa1049a441d478b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\067fef60f9bf85639fa1049a441d478b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0-beta01.aar\c14280214e2f853a0c63f08f6ffb2c97\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0-beta01.aar\c14280214e2f853a0c63f08f6ffb2c97\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0-beta01.aar\8c29aaa6cabe5db48ba5857a16e19b21\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0-beta01.aar\8c29aaa6cabe5db48ba5857a16e19b21\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\print-1.0.0-beta01.aar\b085c762f4f6b1fe4c0da944c8e7e768\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\print-1.0.0-beta01.aar\b085c762f4f6b1fe4c0da944c8e7e768\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0-beta01.aar\73ba778e583754331795f977fdc8be45\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0-beta01.aar\73ba778e583754331795f977fdc8be45\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0-beta01.aar\3e028263a8b02d99ac1a6a158a400436\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] C:\Users\javie\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0-beta01.aar\3e028263a8b02d99ac1a6a158a400436\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\javie\flutter_camera_app\android\app\src\debug\AndroidManifest.xml
+provider#de.esys.esysfluttershare.EsysFlutterShareFileProvider
+ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:13-110
+	android:exported
+		ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:13-81
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:13-15:72
+	android:resource
+		ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from [:esys_flutter_share] C:\Users\javie\flutter_camera_app\build\esys_flutter_share\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:17-67
+uses-permission#android.permission.CAMERA
+ADDED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from [:camera] C:\Users\javie\flutter_camera_app\build\camera\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:22-68
