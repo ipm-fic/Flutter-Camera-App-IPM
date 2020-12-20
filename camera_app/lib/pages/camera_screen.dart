@@ -61,6 +61,18 @@ class _CameraScreenState extends State {
     }
   }
 
+  Widget _rowGalleryButton(){
+    return Expanded(
+        child: Align(
+          alignment: Alignment.center,
+          child: Icon(
+            Icons.photo_library_rounded,
+            color: Colors.white,
+            size: 38,
+          ),
+        ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -76,21 +88,21 @@ class _CameraScreenState extends State {
                 child: _cameraPreviewWidget(),
               ),
               Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  height: 120,
-                  //width: double.infinity,
-                  //padding: EdgeInsets.all(15),
-                  color: Colors.black,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      _cameraToggleRowWidget(),
-                      _cameraControlWidget(context),
-                      Spacer()
-                    ],
-                  ),
-                ),
+                alignment: Alignment.center,
+                  child: Container(
+                    height: 100,
+                    //width: double.infinity,
+                    //padding: EdgeInsets.all(15),
+                    color: Colors.black,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        _cameraToggleRowWidget(),
+                        _cameraControlWidget(context),
+                        _rowGalleryButton()
+                      ],
+                    ),
+                  )
               )
             ],
           ),
@@ -102,12 +114,14 @@ class _CameraScreenState extends State {
   /// Display Camera preview.
   Widget _cameraPreviewWidget() {
     if (controller == null || !controller.value.isInitialized) {
-      return const Text(
-        'Loading',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 20.0,
-          fontWeight: FontWeight.w900,
+      return Center(
+        child: const Text(
+          'Cargando...',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20.0,
+            fontWeight: FontWeight.w900,
+          ),
         ),
       );
     }
@@ -120,18 +134,18 @@ class _CameraScreenState extends State {
 
   /// Display the control bar with buttons to take pictures
   Widget _cameraControlWidget(context) {
-    return Expanded(
+    return Expanded (
       child: Align(
         alignment: Alignment.center,
         child: FloatingActionButton(
-              child: Icon(
-                Icons.camera,
-                color: Colors.black,
-              ),
-              backgroundColor: Colors.white,
-              onPressed: () {
-                _onCapturePressed(context);
-              },
+          child: Icon(
+            Icons.camera,
+            color: Colors.black,
+          ),
+          backgroundColor: Colors.white,
+          onPressed: () {
+            _onCapturePressed(context);
+          },
         ),
       ),
     );
@@ -140,7 +154,6 @@ class _CameraScreenState extends State {
 
 
   /// Display a row of toggle to select the camera (or a message if no camera is available).
-
   Widget _cameraToggleRowWidget() {
     if (cameras == null || cameras.isEmpty) {
       return Spacer();
@@ -148,11 +161,9 @@ class _CameraScreenState extends State {
     CameraDescription selectedCamera = cameras[selectedCameraIndex];
     CameraLensDirection lensDirection = selectedCamera.lensDirection;
 
-    return Expanded(
-      child: Align(
-        alignment: Alignment.centerLeft,
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
+    return Expanded (
+        child: Align(
+          alignment: Alignment.centerRight,
           child: FlatButton.icon(
             onPressed:
             _onSwitchCamera,
@@ -170,7 +181,6 @@ class _CameraScreenState extends State {
             ),
           ),
         ),
-      ),
     );
   }
 
