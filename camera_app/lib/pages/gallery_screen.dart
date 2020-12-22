@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return Center(
         child: Text(
           "Utiliza el botón (+) para añadir fotos o pulsa el icono con la cámara"
-              "para realizar una nueva foto.",
+              " para realizar una nueva foto.",
           style: TextStyle(
             color: Colors.white,
           ),
@@ -99,10 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
     final picker = ImagePicker();
 
     final file = await picker.getImage(source: ImageSource.gallery);
-    setState(() {
-      _path = file.path;
-      _imagesList.add(_path);
-    });
+    if (file != null) {
+      setState(() {
+        _path = file.path;
+        _imagesList.add(_path);
+      });
+    }
   }
 
   void _oncapturePressed(context){
