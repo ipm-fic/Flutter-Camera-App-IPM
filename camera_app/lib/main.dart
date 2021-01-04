@@ -1,4 +1,5 @@
 import 'package:camera_app/pages/gallery_screen.dart';
+import 'package:camera_app/pages/loading_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Camera App',
       theme: ThemeData(
-        primaryColor: Colors.black,
+        //primaryColor: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Galería'),
+      home: LoadingScreen(),
     );
   }
 }

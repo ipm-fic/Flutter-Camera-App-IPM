@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:camera_app/pages/preview_screen.dart';
+import 'package:camera_app/pages/gallery_screen.dart';
 
 
 class CameraScreen extends StatefulWidget {
@@ -68,7 +70,7 @@ class _CameraScreenState extends State {
           child: Icon(
             Icons.photo_library_rounded,
             color: Colors.white,
-            size: 38,
+            size: 28,
           ),
         ),
     );
@@ -163,21 +165,14 @@ class _CameraScreenState extends State {
 
     return Expanded (
         child: Align(
-          alignment: Alignment.centerRight,
-          child: FlatButton.icon(
-            onPressed:
-            _onSwitchCamera,
-            icon: Icon(
+          alignment: Alignment.center,
+          child: FloatingActionButton(
+            backgroundColor: Colors.black,
+            onPressed: _onSwitchCamera,
+            child: Icon(
               _getCameraLensIcon(lensDirection),
               color: Colors.white,
-              size: 24,
-            ),
-            label: Text(
-              '${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase()}',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500
-              ),
+              size: 28,
             ),
           ),
         ),
@@ -204,19 +199,20 @@ class _CameraScreenState extends State {
     print(errorText);
   }
 
+
   void _onCapturePressed(context) async {
 
     try {
       final path =
-      join((await getTemporaryDirectory()).path, '${DateTime.now()}.png');
+          join((await getTemporaryDirectory()).path, '${DateTime.now()}.png');
       await controller.takePicture();
 
 
-     // Navigator.push(
-     //     context,
-     //     MaterialPageRoute(
-     //         builder: (context) => PreviewScreen(imgPath: path))
-     // );
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+             builder: (context) => PreviewScreen(imgPath: path))
+      );
     } catch (e) {
       _showCameraException(e);
     }
