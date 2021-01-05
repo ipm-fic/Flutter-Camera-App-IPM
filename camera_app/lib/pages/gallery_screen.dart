@@ -1,12 +1,8 @@
-
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'camera_screen.dart';
-
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -27,8 +23,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  String _path = null;
+  String _path;
   List<String> _imagesList = [];
 
   @override
@@ -49,25 +44,25 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.only(right: 15),
             child: IconButton(
-              onPressed: (){
+              onPressed: () {
                 _showPhotoLibrary(context);
               },
               icon: Icon(
-                  Icons.add_box,
-                  color: Colors.white,
-                  size: 30,
-                ),
+                Icons.add_box,
+                color: Colors.white,
+                size: 30,
               ),
+            ),
           ),
         ],
         centerTitle: true,
         shadowColor: Colors.white24,
       ),
-      body: SafeArea(
-        child: _stringOrPic(context)
-      ),
+      body: SafeArea(child: _stringOrPic(context)),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){_oncapturePressed(context);},
+        onPressed: () {
+          _oncapturePressed(context);
+        },
         tooltip: 'Hacer foto',
         backgroundColor: Colors.white,
         child: Icon(
@@ -80,18 +75,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _stringOrPic(BuildContext context) {
     if (_path == null) {
-      return Center(
-        child: Text(
-          "Utiliza el botón (+) para añadir fotos o pulsa el icono con la cámara"
-              " para realizar una nueva foto.",
-          style: TextStyle(
-            color: Colors.white,
+      return Padding(
+        padding: EdgeInsets.all(20),
+        child: Center(
+          child: Text(
+            "Utiliza el botón (+) para añadir fotos o pulsa el icono con la cámara"
+            " para realizar una nueva foto.",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, height: 1.8),
           ),
         ),
       );
-    }
-    else {
-      return _loadGallery(context);
+    } else {
+      return Padding(
+        padding: EdgeInsets.all(20),
+        child: _loadGallery(context),
+      );
     }
   }
 
@@ -107,33 +106,27 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  void _oncapturePressed(context){
+  void _oncapturePressed(context) {
     Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => CameraScreen()
-        )
-    );
+        context, MaterialPageRoute(builder: (context) => CameraScreen()));
   }
 
   Widget _loadGallery(BuildContext context) {
-
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
+        crossAxisCount: 4,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
       itemBuilder: (context, index) {
-        return Container (
+        return Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            image: DecorationImage(
-              image: AssetImage(
-                _imagesList[index],
-              ),
-              fit: BoxFit.cover
-            )
-          ),
+              borderRadius: BorderRadius.circular(8),
+              image: DecorationImage(
+                  image: AssetImage(
+                    _imagesList[index],
+                  ),
+                  fit: BoxFit.cover)),
         );
       },
       itemCount: _imagesList.length,
