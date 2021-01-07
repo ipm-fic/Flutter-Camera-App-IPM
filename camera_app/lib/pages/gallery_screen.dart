@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:camera_app/gallery_images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -23,8 +26,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _path;
-  List<String> _imagesList = [];
+  List<GalleryImages> _imagesList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         shadowColor: Colors.white24,
       ),
-      body: SafeArea(child: _stringOrPic(context)),
+      body: SafeArea(
+        child: _stringOrPic(context),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _oncapturePressed(context);
@@ -74,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _stringOrPic(BuildContext context) {
-    if (_path == null) {
+    if (_imagesList.isEmpty) {
       return Padding(
         padding: EdgeInsets.all(20),
         child: Center(
@@ -98,10 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
     final picker = ImagePicker();
 
     final file = await picker.getImage(source: ImageSource.gallery);
-    if (file != null) {
+    if (file == null)
+      return;
+    else {
+      File imageFile = File(file.path);
       setState(() {
-        _path = file.path;
-        _imagesList.add(_path);
+        _imagesList.add(new GalleryImages(imageFile));
       });
     }
   }
@@ -119,14 +125,22 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSpacing: 10,
       ),
       itemBuilder: (context, index) {
-        return Container(
-          decoration: BoxDecoration(
+        return GestureDetector(
+          onLongPress: () {
+            setState(() {
+              _imagesList.removeAt(index);
+            });
+          },
+          child: Container(
+            decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               image: DecorationImage(
-                  image: AssetImage(
-                    _imagesList[index],
+                  image: FileImage(
+                    _imagesList[index].getImageFile(),
                   ),
-                  fit: BoxFit.cover)),
+                  fit: BoxFit.cover),
+            ),
+          ),
         );
       },
       itemCount: _imagesList.length,
