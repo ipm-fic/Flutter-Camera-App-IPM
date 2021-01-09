@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:camera_app/gallery_images.dart';
+import 'package:camera_app/pages/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -130,6 +131,14 @@ class _MyHomePageState extends State<MyHomePage> {
             setState(() {
               _imagesList.removeAt(index);
             });
+          },
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => PreviewScreen(
+                          imgPath: _imagesList[index].imagePath,
+                        )));
           },
           child: Container(
             decoration: BoxDecoration(

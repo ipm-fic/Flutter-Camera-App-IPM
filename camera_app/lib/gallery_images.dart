@@ -6,6 +6,7 @@ class GalleryImages {
 
   GalleryImages(File file) {
     this.imageFile = file;
+    this.imagePath = file.path;
   }
 
   File getImageFile() {
