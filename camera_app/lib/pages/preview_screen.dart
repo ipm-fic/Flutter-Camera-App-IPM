@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'dart:ui';
+import 'package:camera_app/pages/output_screen.dart';
 import 'package:flutter/material.dart';
 
 class PreviewScreen extends StatelessWidget {
@@ -12,6 +14,9 @@ class PreviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      appBar: AppBar(
+
+      ),
       body: Container(
         child: Align(
           alignment: Alignment.center,
@@ -25,22 +30,19 @@ class PreviewScreen extends StatelessWidget {
         color: Colors.black,
         child: Row(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: Icon(
-                Icons.highlight_off_rounded,
-                size: 38,
-                color: Colors.white,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
+            FloatingActionButton(
+              backgroundColor: Colors.white,
               child: Icon(
                 Icons.check,
-                size: 38,
-                color: Colors.white,
+                size: 34,
+                color: Colors.black,
               ),
-            ),
+                onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                return OutputScreen(imgPath: imgPath);
+              }));
+
+            })
           ],
           mainAxisAlignment: MainAxisAlignment.center,
         ),

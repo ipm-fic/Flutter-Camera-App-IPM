@@ -1,9 +1,7 @@
 import 'package:camera/camera.dart';
-import 'package:camera_app/gallery_images.dart';
+import 'package:camera_app/pages/gallery_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:camera_app/pages/preview_screen.dart';
 
 class CameraScreen extends StatefulWidget {
@@ -66,10 +64,17 @@ class _CameraScreenState extends State {
     return Expanded(
       child: Align(
         alignment: Alignment.center,
-        child: Icon(
-          Icons.photo_library_rounded,
-          color: Colors.white,
-          size: 38,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context, MaterialPageRoute(builder: (context){
+              return MyHomePage(title: 'Galería');
+            }));
+          },
+          child: Icon(
+            Icons.photo_library_rounded,
+            color: Colors.white,
+            size: 38,
+          ),
         ),
       ),
     );
