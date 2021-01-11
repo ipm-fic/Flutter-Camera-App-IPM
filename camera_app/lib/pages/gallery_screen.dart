@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:camera_app/gallery_images.dart';
@@ -5,6 +6,7 @@ import 'package:camera_app/pages/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'camera_screen.dart';
 
@@ -28,6 +30,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<GalleryImages> _imagesList = [];
+  SharedPreferences sharedPreferences;
+
+  @override
+  void initState() {
+    print(_imagesList);
+    initSharedPreferences();
+    super.initState();
+  }
+
+  initSharedPreferences() async {
+    sharedPreferences = await SharedPreferences.getInstance();
+    readData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
       File imageFile = File(file.path);
       setState(() {
         _imagesList.add(new GalleryImages(imageFile));
+        saveData();
       });
     }
   }
@@ -130,6 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onLongPress: () {
             setState(() {
               _imagesList.removeAt(index);
+              saveData();
             });
           },
           onTap: () {
@@ -145,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
               borderRadius: BorderRadius.circular(8),
               image: DecorationImage(
                   image: FileImage(
-                    _imagesList[index].getImageFile(),
+                    File(_imagesList[index].imagePath),
                   ),
                   fit: BoxFit.cover),
             ),
@@ -154,5 +171,18 @@ class _MyHomePageState extends State<MyHomePage> {
       },
       itemCount: _imagesList.length,
     );
+  }
+
+  void saveData() {
+    List<String> spList =
+        _imagesList.map((item) => json.encode(item.toMap())).toList();
+    sharedPreferences.setStringList('imageList', spList);
+  }
+
+  void readData() {
+    List<String> spList = sharedPreferences.getStringList('imageList');
+    _imagesList =
+        spList.map((item) => GalleryImages.fromMap(json.decode(item))).toList();
+    setState(() {});
   }
 }
