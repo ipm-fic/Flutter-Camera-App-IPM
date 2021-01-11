@@ -12,4 +12,14 @@ class GalleryImages {
   File getImageFile() {
     return this.imageFile;
   }
+
+  GalleryImages.fromMap(Map map) {
+    this.imagePath = map['imagePath'];
+  }
+
+  Map toMap() {
+    return {
+      'imagePath': this.imagePath,
+    };
+  }
 }
