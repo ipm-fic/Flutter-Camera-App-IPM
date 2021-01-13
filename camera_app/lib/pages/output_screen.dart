@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:convert';
+import 'package:camera_app/pages/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -24,7 +25,7 @@ Future<String> PostImage(String imagePath) async{
   var stream = new http.ByteStream(DelegatingStream.typed(imageFile.openRead()));
   var length = await imageFile.length();
   Map<String, String> headers = { HttpHeaders.authorizationHeader: 'Basic YWNjXzhjMzhiZjZhYWUxMzZlZTo4MGYxOWYwZDQ5YzljYTZmYjYxYWEwMWMwYWYxMjBjOA=='};
-  int timeout = 10;
+  int timeout = 20;
 
   var request = new http.MultipartRequest("POST", Uri.parse('https://api.imagga.com/v2/colors'));
   request.headers.addAll(headers);
@@ -40,6 +41,7 @@ Future<String> PostImage(String imagePath) async{
   request.files.add(multipartFile);
 
   var streamedResponse = await request.send().timeout(Duration(seconds: timeout));
+
 
   if(streamedResponse.statusCode == HttpStatus.ok) {
     var responseStream = await streamedResponse.stream.toBytes();
@@ -67,7 +69,7 @@ class _OutputScreenState extends State<OutputScreen>{
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Colors Analytics'),
+        title: Text('Análisis de los colores'),
         shadowColor: Colors.white,
       ),
       body: Column(
@@ -81,14 +83,23 @@ class _OutputScreenState extends State<OutputScreen>{
                     String data = snapshot.data;
                     return jsonParser(data, context);
                   }
-                  else if(snapshot.connectionState != ConnectionState.done){
+                  else if((snapshot.connectionState != ConnectionState.done)) {
                     return Center(
                       child: CircularProgressIndicator(),
                     );
                   }
                   else{
-                    return Center(
-                      child: Text("Server Error"),
+                    return AlertDialog(
+                      title: new Text("Error con el servidor"),
+                      content: new Text("No se ha podido realizar la conexión con el servidor, pruebe de nuevo más tarde"),
+                      actions: <Widget>[
+                        new FlatButton(
+                          child: new Text("Galería"),
+                          onPressed: (){
+                            Navigator.pop(context);
+                          }
+                        )
+                      ],
                     );
                   }
                 },
