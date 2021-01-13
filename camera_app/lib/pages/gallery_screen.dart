@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:camera_app/gallery_images.dart';
 import 'package:camera_app/pages/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'camera_screen.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -86,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Hacer foto',
         backgroundColor: Colors.white,
         child: Icon(
-          CupertinoIcons.photo_camera_solid,
+          CupertinoIcons.right_chevron,
           color: Colors.black,
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
@@ -99,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.all(20),
         child: Center(
           child: Text(
-            "Utiliza el botón (+) para añadir fotos o pulsa el icono con la cámara"
+            "Utiliza el botón (+) para añadir fotos o pulsa el icono con la flecha"
             " para realizar una nueva foto.",
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white, height: 1.8),
