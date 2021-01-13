@@ -143,36 +143,42 @@ class _OutputScreenState extends State<OutputScreen> {
         itemCount: 6 * length,
         padding: const EdgeInsets.all(20.0),
         itemBuilder: (BuildContext context, int n) => SafeArea(
-              child: createView(n, colors, res),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 3.5),
+                    child: createView(n, colors, res),
+                  ),
+                ],
+              ),
             ));
   }
 
   Widget createView(int n, List<Color> colors, List<String> res) {
     if (n % 6 == 0) {
-      return Row(
-        children: <Widget>[
-          MaterialButton(
-            color: colors[n ~/ 6],
-            shape: CircleBorder(),
-            onPressed: () {},
-          ),
-          Text(
-            res[n],
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-          )
-        ],
+      return Padding(
+        padding: const EdgeInsets.only(top: 10.0, bottom: 5),
+        child: Column(
+          children: <Widget>[
+            MaterialButton(
+              color: colors[n ~/ 6],
+              shape: CircleBorder(),
+              onPressed: () {},
+            ),
+            Text(
+              res[n],
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            )
+          ],
+        ),
       );
     } else {
-      return Padding(
-        padding: const EdgeInsets.only(bottom: 10),
-        child: Align(
-          alignment: Alignment.center,
-          child: Text(
-            res[n],
-            textAlign: TextAlign.left,
-            style: TextStyle(color: Colors.white, height: 1.6),
-          ),
-        ),
+      return Text(
+        res[n],
+        style: TextStyle(color: Colors.white),
       );
     }
   }
