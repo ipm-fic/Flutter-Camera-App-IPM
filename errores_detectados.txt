@@ -4,8 +4,8 @@ I/CameraManagerGlobal(10361): Connecting to camera service
 I/flutter (10361): Error:cameraPermission
 I/flutter (10361): Error message : MediaRecorderCamera permission not granted
 
-Además no vuelve a la pantalla anterior. 
-Si utilizas el botón de Android para volver hacia atrás, las fotos que tenías guardadas se pierden. A pesar de ello, deja añadir nuevas fotos otra vez. 
+PENDIENTE: Volver a la galería al denegar acceso por permisos 
+
 
 Si permites acceso a cámara pero a audio no: 
 
@@ -14,7 +14,6 @@ I/flutter (10361): Error message : MediaRecorderCamera permission not granted
 
 Si uso el botón de cambio de cámara, hace la animación pero en la terminal vuelve a cargar el error de arriba.
 
-Sin embargo ahora sí me ha guardado las fotos que tenía. 
 
 
 
