@@ -66,7 +66,7 @@ class _CameraScreenState extends State {
         alignment: Alignment.center,
         child: GestureDetector(
           onTap: () {
-            Navigator.pop(context, MaterialPageRoute(builder: (context){
+            Navigator.pop(context, MaterialPageRoute(builder: (context) {
               return MyHomePage(title: 'Galería');
             }));
           },
@@ -216,12 +216,14 @@ class _CameraScreenState extends State {
       if (mounted) {
         setState(() {
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => PreviewScreen(
-                        imgPath: file.path,
-                        aspectRatio: controller.value.aspectRatio,
-                      )));
+            context,
+            MaterialPageRoute(
+              builder: (context) => PreviewScreen(
+                imgPath: file.path,
+                aspectRatio: controller.value.aspectRatio,
+              ),
+            ),
+          );
         });
       }
     });

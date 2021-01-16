@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'camera_screen.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _oncapturePressed(context);
+          checkPermissions(context);
         },
         tooltip: 'Hacer foto',
         backgroundColor: Colors.white,
@@ -179,8 +180,58 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void readData() {
     List<String> spList = sharedPreferences.getStringList('imageList');
-    _imagesList =
-        spList.map((item) => GalleryImages.fromMap(json.decode(item))).toList();
-    setState(() {});
+    if (_imagesList.isNotEmpty) {
+      _imagesList = spList
+          .map((item) => GalleryImages.fromMap(json.decode(item)))
+          .toList();
+      setState(() {});
+    }
+  }
+
+  checkPermissions(BuildContext context) async {
+    var cameraStatus = await Permission.camera.status;
+    var microStatus = await Permission.microphone.status;
+
+    if (!cameraStatus.isGranted & !cameraStatus.isPermanentlyDenied) {
+      await Permission.camera.request();
+    }
+    if (!microStatus.isGranted & !microStatus.isPermanentlyDenied) {
+      await Permission.microphone.request();
+    } else {
+      if (cameraStatus.isPermanentlyDenied) {
+        setPermissionAlert(context, "cámara");
+      }
+      if (microStatus.isPermanentlyDenied) {
+        setPermissionAlert(context, "micrófono");
+      } else {
+        _oncapturePressed(context);
+      }
+    }
+  }
+
+  setPermissionAlert(BuildContext context, String perm) {
+    Widget text = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+
+    AlertDialog alert = AlertDialog(
+      title: Text("Se requieren permisos"),
+      content: Text(
+          "Se requiere conceder permisos de acceso a $perm para capturar fotos.\n\n" +
+              "Permita el acceso a $perm desde la sección permisos de la aplicación en los ajustes del dispositivo."),
+      actions: [
+        text,
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
 }

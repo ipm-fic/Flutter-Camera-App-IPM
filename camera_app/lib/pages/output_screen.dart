@@ -124,16 +124,16 @@ class _OutputScreenState extends State<OutputScreen> {
       values = data['result']['colors']['image_colors'][i].values.toList();
 
       res.add(values[1].toString().toUpperCase());
-      res.add('HTML Code -> ' + values[6].toString());
+      res.add('HTML Code: ' + values[6].toString());
       res.add('R: ' +
           values[8].toString() +
           '  G: ' +
           values[5].toString() +
           '  B: ' +
           values[0].toString());
-      res.add('Closest color parent: ' + values[3].toString());
-      res.add('Percentage in the image: ' + values[7].toStringAsFixed(2) + '%');
-      res.add('Closest palette distance: ' + values[4].toString());
+      res.add('Pariente más cercano: ' + values[3].toString());
+      res.add('Porcentaje en la imágen: ' + values[7].toStringAsFixed(2) + '%');
+      res.add('Paleta más cercana: ' + values[4].toStringAsFixed(2));
 
       colors.add(Color.fromARGB(255, values[8], values[5], values[0]));
     }
