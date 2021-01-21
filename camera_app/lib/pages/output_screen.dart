@@ -89,14 +89,40 @@ class _OutputScreenState extends State<OutputScreen> {
                 return Center(
                   child: CircularProgressIndicator(),
                 );
-              } else {
+              } else if (!snapshot.hasData) {
                 return AlertDialog(
-                  title: new Text("Error con el servidor"),
+                  title: new Text("Error"),
                   content: new Text(
-                      "No se ha podido realizar la conexión con el servidor, pruebe de nuevo más tarde"),
+                      "No se ha podido realizar la detección de colores."),
                   actions: <Widget>[
                     new FlatButton(
-                        child: new Text("Galería"),
+                        child: new Text("OK"),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        })
+                  ],
+                );
+              } else if (snapshot.hasError) {
+                return AlertDialog(
+                  title: new Text("Error"),
+                  content: new Text(
+                      "Se ha detectado un error.\nInténtelo de nuevo más tarde."),
+                  actions: <Widget>[
+                    new FlatButton(
+                        child: new Text("OK"),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        })
+                  ],
+                );
+              } else {
+                return AlertDialog(
+                  title: new Text("Error"),
+                  content: new Text(
+                      "No se ha podido realizar la conexión con el servidor.\nInténtelo de nuevo más tarde."),
+                  actions: <Widget>[
+                    new FlatButton(
+                        child: new Text("OK"),
                         onPressed: () {
                           Navigator.pop(context);
                         })

@@ -33,7 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    print(_imagesList);
     initSharedPreferences();
     super.initState();
   }
@@ -62,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.only(right: 15),
             child: IconButton(
               onPressed: () {
-                _showPhotoLibrary(context);
+                checkPermissionsGallery(context);
               },
               icon: Icon(
                 Icons.add_box,
@@ -80,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          checkPermissions(context);
+          checkPermissionsCamera(context);
         },
         tooltip: 'Hacer foto',
         backgroundColor: Colors.white,
@@ -123,8 +122,23 @@ class _MyHomePageState extends State<MyHomePage> {
       File imageFile = File(file.path);
       setState(() {
         _imagesList.add(new GalleryImages(imageFile));
+        print("Guardando");
         saveData();
       });
+    }
+  }
+
+  void checkPermissionsGallery(BuildContext context) async {
+    var galleryStatus = await Permission.storage.status;
+
+    if (!galleryStatus.isGranted & !galleryStatus.isPermanentlyDenied) {
+      await Permission.storage.request();
+    } else {
+      if (galleryStatus.isPermanentlyDenied) {
+        setPermissionAlertGallery(context);
+      } else {
+        _showPhotoLibrary(context);
+      }
     }
   }
 
@@ -188,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  checkPermissions(BuildContext context) async {
+  checkPermissionsCamera(BuildContext context) async {
     var cameraStatus = await Permission.camera.status;
     var microStatus = await Permission.microphone.status;
 
@@ -222,6 +236,31 @@ class _MyHomePageState extends State<MyHomePage> {
       content: Text(
           "Se requiere conceder permisos de acceso a $perm para capturar fotos.\n\n" +
               "Permita el acceso a $perm desde la sección permisos de la aplicación en los ajustes del dispositivo."),
+      actions: [
+        text,
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
+  setPermissionAlertGallery(BuildContext context) {
+    Widget text = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+
+    AlertDialog alert = AlertDialog(
+      title: Text("Se requieren permisos"),
+      content: Text("Se requiere conceder permisos de acceso a galería.\n\n" +
+          "Permita el acceso desde la sección permisos de la aplicación en los ajustes del dispositivo."),
       actions: [
         text,
       ],

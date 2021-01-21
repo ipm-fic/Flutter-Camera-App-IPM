@@ -175,8 +175,11 @@ class _CameraScreenState extends State {
             size: 24,
           ),
           label: Text(
-            '${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase()}',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+            '${(lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase() == "BACK") ? "FRONT" : "BACK"}',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ),
