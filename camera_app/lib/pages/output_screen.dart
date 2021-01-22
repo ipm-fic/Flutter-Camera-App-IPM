@@ -49,7 +49,6 @@ Future<String> PostImage(String imagePath) async {
   if (streamedResponse.statusCode == HttpStatus.ok) {
     var responseStream = await streamedResponse.stream.toBytes();
     var responseString = String.fromCharCodes(responseStream);
-    // print(responseString);
     return responseString;
   } else {
     throw Exception('Failed HTTP');

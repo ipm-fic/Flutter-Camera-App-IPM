@@ -116,7 +116,6 @@ class _CameraScreenState extends State {
     );
   }
 
-  /// Display Camera preview.
   Widget _cameraPreviewWidget() {
     if (controller == null || !controller.value.isInitialized) {
       return Center(
@@ -137,7 +136,6 @@ class _CameraScreenState extends State {
     );
   }
 
-  /// Display the control bar with buttons to take pictures
   Widget _cameraControlWidget(context) {
     return Expanded(
       child: Align(
@@ -156,7 +154,6 @@ class _CameraScreenState extends State {
     );
   }
 
-  /// Display a row of toggle to select the camera (or a message if no camera is available).
   Widget _cameraToggleRowWidget() {
     if (cameras == null || cameras.isEmpty) {
       return Spacer();

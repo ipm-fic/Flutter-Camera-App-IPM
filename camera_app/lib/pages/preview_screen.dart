@@ -14,9 +14,7 @@ class PreviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-
-      ),
+      appBar: AppBar(),
       body: Container(
         child: Align(
           alignment: Alignment.center,
@@ -31,18 +29,18 @@ class PreviewScreen extends StatelessWidget {
         child: Row(
           children: <Widget>[
             FloatingActionButton(
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.check,
-                size: 34,
-                color: Colors.black,
-              ),
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.check,
+                  size: 34,
+                  color: Colors.black,
+                ),
                 onPressed: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-                return OutputScreen(imgPath: imgPath);
-              }));
-
-            })
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return OutputScreen(imgPath: imgPath);
+                  }));
+                })
           ],
           mainAxisAlignment: MainAxisAlignment.center,
         ),
