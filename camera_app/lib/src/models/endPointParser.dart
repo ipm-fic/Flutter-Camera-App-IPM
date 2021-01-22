@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-ListView jsonParser(String snapdata, BuildContext context) {
+Widget jsonParser(String snapdata, BuildContext context) {
   Map data = jsonDecode(snapdata);
 
   var length = data['result']['colors']['image_colors'].length;

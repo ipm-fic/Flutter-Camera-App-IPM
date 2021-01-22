@@ -163,7 +163,7 @@ class _CameraScreenState extends State {
 
     return Expanded(
       child: Align(
-        alignment: Alignment.centerRight,
+        alignment: Alignment.center,
         child: FlatButton.icon(
           onPressed: _onSwitchCamera,
           icon: Icon(

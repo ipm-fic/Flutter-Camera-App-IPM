@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'package:async/async.dart';
@@ -46,16 +45,23 @@ class ColorsProvider {
         var responseString = String.fromCharCodes(responseStream);
         return responseString;
       } else if (streamedResponse.statusCode == HttpStatus.notFound) {
-        return "404 (not found)";
+        return "No encontrado";
+      } else if (streamedResponse.statusCode == HttpStatus.unauthorized) {
+        return "Credenciales API no válidas";
+      } else if (streamedResponse.statusCode == HttpStatus.badRequest) {
+        return "Petición inválida";
+      } else if (streamedResponse.statusCode == HttpStatus.forbidden) {
+        return "Prohibido";
       } else {
-        return "500 (internal)";
+        print("${streamedResponse.statusCode}");
+        return "Interno";
       }
     } on TimeoutException catch (_) {
       print(_);
-      return "408 (request timeout)";
+      return "Tiempo de petición excedido";
     } on SocketException catch (error) {
       print(error);
-      return "SocketEx";
+      return "Socket Exception";
     }
   }
 }
