@@ -122,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
       File imageFile = File(file.path);
       setState(() {
         _imagesList.add(new GalleryImages(imageFile));
-        print("Guardando");
         saveData();
       });
     }
@@ -194,12 +193,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void readData() {
     List<String> spList = sharedPreferences.getStringList('imageList');
-    if (_imagesList.isNotEmpty) {
-      _imagesList = spList
-          .map((item) => GalleryImages.fromMap(json.decode(item)))
-          .toList();
-      setState(() {});
-    }
+    _imagesList =
+        spList.map((item) => GalleryImages.fromMap(json.decode(item))).toList();
+    setState(() {});
   }
 
   checkPermissionsCamera(BuildContext context) async {
@@ -217,7 +213,8 @@ class _MyHomePageState extends State<MyHomePage> {
       }
       if (microStatus.isPermanentlyDenied) {
         setPermissionAlert(context, "micrófono");
-      } else {
+      }
+      if (cameraStatus.isGranted & microStatus.isGranted) {
         _oncapturePressed(context);
       }
     }

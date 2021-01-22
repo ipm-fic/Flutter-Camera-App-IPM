@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:convert';
-import 'package:camera_app/pages/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
