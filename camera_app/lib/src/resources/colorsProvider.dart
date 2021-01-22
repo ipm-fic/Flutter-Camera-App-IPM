@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
@@ -33,15 +35,27 @@ class ColorsProvider {
 
     request.files.add(multipartFile);
 
-    var streamedResponse =
-        await request.send().timeout(Duration(seconds: timeout));
+    var streamedResponse;
 
-    if (streamedResponse.statusCode == HttpStatus.ok) {
-      var responseStream = await streamedResponse.stream.toBytes();
-      var responseString = String.fromCharCodes(responseStream);
-      return responseString;
-    } else {
-      throw Exception('Failed HTTP');
+    try {
+      streamedResponse =
+          await request.send().timeout(Duration(seconds: timeout));
+
+      if (streamedResponse.statusCode == HttpStatus.ok) {
+        var responseStream = await streamedResponse.stream.toBytes();
+        var responseString = String.fromCharCodes(responseStream);
+        return responseString;
+      } else if (streamedResponse.statusCode == HttpStatus.notFound) {
+        return "404 (not found)";
+      } else {
+        return "500 (internal)";
+      }
+    } on TimeoutException catch (_) {
+      print(_);
+      return "408 (request timeout)";
+    } on SocketException catch (error) {
+      print(error);
+      return "SocketEx";
     }
   }
 }

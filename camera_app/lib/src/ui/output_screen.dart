@@ -37,6 +37,11 @@ class _OutputScreenState extends State<OutputScreen> {
               builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
                 if (snapshot.hasData) {
                   String data = snapshot.data;
+                  if (data == "404 (not found)") return _onNotFound();
+                  if (data == "408 (request timeout)")
+                    return _onRequestTimeout();
+                  if (data == "500 (internal") return _onInternal();
+                  if (data == "SocketEx") return _onSocket();
                   return jsonParser(data, context);
                 } else if (snapshot.hasError) {
                   return AlertDialog(
@@ -61,6 +66,66 @@ class _OutputScreenState extends State<OutputScreen> {
           )
         ],
       ),
+    );
+  }
+
+  Widget _onNotFound() {
+    return AlertDialog(
+      title: new Text("Error"),
+      content: new Text(
+          "No se ha podido establecer conexión con el servidor.\n\n(No encontrado)"),
+      actions: <Widget>[
+        new FlatButton(
+            child: new Text("OK"),
+            onPressed: () {
+              Navigator.pop(context);
+            })
+      ],
+    );
+  }
+
+  Widget _onRequestTimeout() {
+    return AlertDialog(
+      title: new Text("Error"),
+      content: new Text(
+          "No se ha podido establecer conexión con el servidor.\n\n(Timeout)"),
+      actions: <Widget>[
+        new FlatButton(
+            child: new Text("OK"),
+            onPressed: () {
+              Navigator.pop(context);
+            })
+      ],
+    );
+  }
+
+  Widget _onInternal() {
+    return AlertDialog(
+      title: new Text("Error"),
+      content: new Text(
+          "No se ha podido establecer conexión con el servidor.\n\n(Interno)"),
+      actions: <Widget>[
+        new FlatButton(
+            child: new Text("OK"),
+            onPressed: () {
+              Navigator.pop(context);
+            })
+      ],
+    );
+  }
+
+  Widget _onSocket() {
+    return AlertDialog(
+      title: new Text("Error"),
+      content: new Text(
+          "No se ha podido establecer conexión con el servidor.\n\n(Revise su conexión a internet)"),
+      actions: <Widget>[
+        new FlatButton(
+            child: new Text("OK"),
+            onPressed: () {
+              Navigator.pop(context);
+            })
+      ],
     );
   }
 }
