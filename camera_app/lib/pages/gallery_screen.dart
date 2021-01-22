@@ -192,7 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void readData() {
-    List<String> spList = sharedPreferences.getStringList('imageList');
+    List<String> spList = sharedPreferences.getStringList('imageList') ?? [];
     _imagesList =
         spList.map((item) => GalleryImages.fromMap(json.decode(item))).toList();
     setState(() {});
