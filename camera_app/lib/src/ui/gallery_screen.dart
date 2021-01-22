@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:camera_app/gallery_images.dart';
-import 'package:camera_app/pages/preview_screen.dart';
+import 'package:camera_app/src/resources/gallery_images.dart';
+import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';

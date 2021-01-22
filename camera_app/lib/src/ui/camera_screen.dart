@@ -1,8 +1,8 @@
 import 'package:camera/camera.dart';
-import 'package:camera_app/pages/gallery_screen.dart';
+import 'package:camera_app/src/ui/gallery_screen.dart';
+import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:camera_app/pages/preview_screen.dart';
 
 class CameraScreen extends StatefulWidget {
   @override

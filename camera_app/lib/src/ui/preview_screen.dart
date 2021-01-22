@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:ui';
-import 'package:camera_app/pages/output_screen.dart';
+import 'package:camera_app/src/ui/output_screen.dart';
 import 'package:flutter/material.dart';
 
 class PreviewScreen extends StatelessWidget {
