@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'camera_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -33,42 +34,95 @@ class _MyHomePageState extends State<MyHomePage> {
     readData();
   }
 
+  double _fontSize (){
+    if (Device.get().isTablet){
+      return 35;
+    } else {
+      return 20;
+    }
+  }
+
+  double _buttonSize(){
+    if (Device.get().isTablet){
+      return 50;
+    } else {
+      return 30;
+    }
+  }
+
+  double _appBarHeight(){
+    if(Device.get().isTablet){
+      return 80;
+    } else{
+      return 40;
+    }
+  }
+
+  double _heightButton(){
+    if(Device.get().isTablet){
+      return 100;
+    } else {
+      return 50;
+    }
+  }
+
+  double _widthButton(){
+    if(Device.get().isTablet){
+      return 100;
+    } else {
+      return 50;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text(widget.title),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 15),
-            child: IconButton(
-              onPressed: () {
-                checkPermissionsGallery(context);
-              },
-              icon: Icon(
-                Icons.add_box,
-                color: Colors.white,
-                size: 30,
+      appBar:PreferredSize(
+        preferredSize: Size.fromHeight(_appBarHeight()),
+        child: AppBar(
+            title: Text(widget.title,
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontSize: _fontSize(),
               ),
             ),
+            actions: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: IconButton(
+                  onPressed: () {
+                    checkPermissionsGallery(context);
+                  },
+                  icon: Icon(
+                    Icons.add_box,
+                    color: Colors.white,
+                    size: _buttonSize(),
+                  ),
+                ),
+              ),
+            ],
+            centerTitle: true,
+            //shadowColor: Colors.white24,
           ),
-        ],
-        centerTitle: true,
-        shadowColor: Colors.white24,
       ),
       body: SafeArea(
         child: _stringOrPic(context),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          checkPermissionsCamera(context);
-        },
-        tooltip: 'Hacer foto',
-        backgroundColor: Colors.white,
-        child: Icon(
-          CupertinoIcons.right_chevron,
-          color: Colors.black,
+      floatingActionButton: Container(
+        height: _heightButton(),
+        width: _widthButton(),
+        child: FloatingActionButton(
+          onPressed: () {
+            checkPermissionsCamera(context);
+          },
+          tooltip: 'Hacer foto',
+          backgroundColor: Colors.white,
+          child: Icon(
+            CupertinoIcons.right_chevron,
+            color: Colors.black,
+            size: _buttonSize(),
+          ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

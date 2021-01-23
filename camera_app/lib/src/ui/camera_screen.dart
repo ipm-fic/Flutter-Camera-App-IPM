@@ -3,6 +3,8 @@ import 'package:camera_app/src/ui/gallery_screen.dart';
 import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 
 class CameraScreen extends StatefulWidget {
   @override
@@ -18,6 +20,7 @@ class _CameraScreenState extends State {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     availableCameras().then((availableCameras) {
       cameras = availableCameras;
 
@@ -102,6 +105,7 @@ class _CameraScreenState extends State {
                     color: Colors.black,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
                         _cameraToggleRowWidget(),
                         _cameraControlWidget(context),

@@ -17,7 +17,7 @@ class ColorsProvider {
         new http.ByteStream(DelegatingStream.typed(imageFile.openRead()));
     var length = await imageFile.length();
     Map<String, String> headers = {HttpHeaders.authorizationHeader: _apiKey};
-    int timeout = 20;
+    int timeout = 2;
 
     var request = new http.MultipartRequest(
         "POST", Uri.parse('https://api.imagga.com/v2/colors'));

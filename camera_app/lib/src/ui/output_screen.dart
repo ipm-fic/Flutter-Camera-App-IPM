@@ -2,6 +2,7 @@ import 'package:camera_app/src/blocs/colorsBloc.dart';
 import 'package:camera_app/src/models/endPointParser.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 
 class OutputScreen extends StatefulWidget {
   final String imgPath;
