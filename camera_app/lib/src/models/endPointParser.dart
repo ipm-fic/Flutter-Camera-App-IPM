@@ -1,3 +1,4 @@
+import 'package:camera_app/src/resources/sizeable.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -48,19 +49,27 @@ Widget jsonParser(String snapdata, BuildContext context) {
 Widget createView(int n, List<Color> colors, List<String> res) {
   if (n % 6 == 0) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10.0, bottom: 5),
+      padding: const EdgeInsets.only(top: 20.0, bottom: 5),
       child: Column(
         children: <Widget>[
-          MaterialButton(
-            color: colors[n ~/ 6],
-            shape: CircleBorder(),
-            onPressed: () {},
+          Container(
+            width: adaptView(100.0, 50.0),
+            height: adaptView(100.0, 50.0),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 3),
+              child: MaterialButton(
+                color: colors[n ~/ 6],
+                shape: CircleBorder(),
+                onPressed: () {},
+              ),
+            ),
           ),
           Text(
             res[n],
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
+              fontSize: adaptView(35.0, 20.0),
             ),
           )
         ],
@@ -69,7 +78,7 @@ Widget createView(int n, List<Color> colors, List<String> res) {
   } else {
     return Text(
       res[n],
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.white, fontSize: adaptView(25.0, 15.0)),
     );
   }
 }

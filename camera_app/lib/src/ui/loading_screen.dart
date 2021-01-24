@@ -1,6 +1,7 @@
 import 'package:camera_app/src/ui/gallery_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:camera_app/src/resources/sizeable.dart';
 
 class LoadingScreen extends StatelessWidget {
   @override
@@ -11,7 +12,7 @@ class LoadingScreen extends StatelessWidget {
       body: Center(
           child: Icon(
         Icons.camera,
-        size: 90,
+        size: adaptView(150.0, 80.0),
         color: Colors.white,
       )),
     );

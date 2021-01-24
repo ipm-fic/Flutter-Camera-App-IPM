@@ -20,14 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4db4533-b137-4967-9c91-89facfd4af0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/02-mobile-javier-escribano.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera_app/lib/pages/gallery_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/pages/gallery_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera_app/lib/pages/output_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/pages/output_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/models/endPointParser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/models/endPointParser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/resources/sizeable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/resources/sizeable.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/ui/camera_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/ui/camera_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/ui/gallery_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/ui/gallery_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/ui/loading_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/ui/loading_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/ui/output_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/ui/output_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera_app/lib/src/ui/preview_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/camera_app/lib/src/ui/preview_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mtjm96q0O1omafnUYZkmxWbViA" />
@@ -99,34 +105,34 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="887" y="490" key="#com.intellij.ide.util.TreeFileChooserDialog/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610320405509" />
-    <state x="100" y="100" width="1687" height="1200" key="AVDManager" timestamp="1610493707166">
+    <state x="100" y="100" width="1687" height="1200" key="AVDManager" timestamp="1611499346783">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="100" y="100" width="1687" height="1200" key="AVDManager/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610493707166" />
-    <state width="1872" height="391" key="GridCell.Tab.0.bottom" timestamp="1610500192773">
+    <state x="100" y="100" width="1687" height="1200" key="AVDManager/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1611499346783" />
+    <state width="1872" height="391" key="GridCell.Tab.0.bottom" timestamp="1611499654981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1872" height="391" key="GridCell.Tab.0.bottom/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610500192773" />
-    <state width="1872" height="391" key="GridCell.Tab.0.center" timestamp="1610500192772">
+    <state width="1872" height="391" key="GridCell.Tab.0.bottom/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1611499654981" />
+    <state width="1872" height="391" key="GridCell.Tab.0.center" timestamp="1611499654981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1872" height="391" key="GridCell.Tab.0.center/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610500192772" />
-    <state width="1872" height="391" key="GridCell.Tab.0.left" timestamp="1610500192772">
+    <state width="1872" height="391" key="GridCell.Tab.0.center/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1611499654981" />
+    <state width="1872" height="391" key="GridCell.Tab.0.left" timestamp="1611499654981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1872" height="391" key="GridCell.Tab.0.left/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610500192772" />
-    <state width="1872" height="391" key="GridCell.Tab.0.right" timestamp="1610500192772">
+    <state width="1872" height="391" key="GridCell.Tab.0.left/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1611499654981" />
+    <state width="1872" height="391" key="GridCell.Tab.0.right" timestamp="1611499654981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1872" height="391" key="GridCell.Tab.0.right/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610500192772" />
+    <state width="1872" height="391" key="GridCell.Tab.0.right/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1611499654981" />
     <state x="659" y="345" key="SettingsEditor" timestamp="1610320017477">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="659" y="345" key="SettingsEditor/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610320017477" />
-    <state x="773" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610500208319">
+    <state x="773" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611359975901">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="773" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1610500208319" />
+    <state x="773" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.358.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1611359975901" />
     <state x="629" y="319" width="672" height="678" key="search.everywhere.popup" timestamp="1610498494476">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

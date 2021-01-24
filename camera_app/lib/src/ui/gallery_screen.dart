@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:camera_app/src/resources/gallery_images.dart';
+import 'package:camera_app/src/resources/sizeable.dart';
 import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'camera_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter/services.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -35,40 +37,54 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown,DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text(widget.title),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 15),
-            child: IconButton(
-              onPressed: () {
-                checkPermissionsGallery(context);
-              },
-              icon: Icon(
-                Icons.add_box,
-                color: Colors.white,
-                size: 30,
+      appBar:PreferredSize(
+        preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
+        child: AppBar(
+            title: Text(widget.title,
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontSize: adaptView(35.0, 20.0),
               ),
             ),
+            actions: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: IconButton(
+                  onPressed: () {
+                    checkPermissionsGallery(context);
+                  },
+                  icon: Icon(
+                    Icons.add_box,
+                    color: Colors.white,
+                    size: adaptView(50.0, 30.0),
+                  ),
+                ),
+              ),
+            ],
+            centerTitle: true,
+            //shadowColor: Colors.white24,
           ),
-        ],
-        centerTitle: true,
-        shadowColor: Colors.white24,
       ),
       body: SafeArea(
         child: _stringOrPic(context),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          checkPermissionsCamera(context);
-        },
-        tooltip: 'Hacer foto',
-        backgroundColor: Colors.white,
-        child: Icon(
-          CupertinoIcons.right_chevron,
-          color: Colors.black,
+      floatingActionButton: Container(
+        height: adaptView(100.0, 50.0),
+        width: adaptView(100.0, 50.0),
+        child: FloatingActionButton(
+          onPressed: () {
+            checkPermissionsCamera(context);
+          },
+          tooltip: 'Hacer foto',
+          backgroundColor: Colors.white,
+          child: Icon(
+            CupertinoIcons.right_chevron,
+            color: Colors.black,
+            size: adaptView(50.0, 30.0),
+          ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

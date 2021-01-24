@@ -33,10 +33,20 @@ dependencies:
   shared_preferences: ^0.5.12+4
   permission_handler: ^5.0.1+1
   rxdart: ^0.18.0
+  flutter_device_type: ^0.3.2
+  services: ^0.0.1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.7.3"
+
+flutter_icons:
+  android: true
+  image_path: "assets/images/icon.png"
+  adaptive_icon_background: "assets/images/background.png"
+  adaptive_icon_foreground: "assets/images/foreground.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,8 +1,11 @@
 import 'package:camera/camera.dart';
+import 'package:camera_app/src/resources/sizeable.dart';
 import 'package:camera_app/src/ui/gallery_screen.dart';
 import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 
 class CameraScreen extends StatefulWidget {
   @override
@@ -73,7 +76,7 @@ class _CameraScreenState extends State {
           child: Icon(
             Icons.photo_library_rounded,
             color: Colors.white,
-            size: 38,
+            size: adaptView(50.0, 30.0),
           ),
         ),
       ),
@@ -82,6 +85,7 @@ class _CameraScreenState extends State {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return Scaffold(
       backgroundColor: Colors.black,
       body: Container(
@@ -96,12 +100,13 @@ class _CameraScreenState extends State {
               Align(
                   alignment: Alignment.center,
                   child: Container(
-                    height: 100,
+                    height: adaptView(150.0, 100.0),
                     //width: double.infinity,
                     //padding: EdgeInsets.all(15),
                     color: Colors.black,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
                         _cameraToggleRowWidget(),
                         _cameraControlWidget(context),
@@ -140,15 +145,20 @@ class _CameraScreenState extends State {
     return Expanded(
       child: Align(
         alignment: Alignment.center,
-        child: FloatingActionButton(
-          child: Icon(
-            Icons.camera,
-            color: Colors.black,
+        child: Container(
+          width: adaptView(100.0, 50.0),
+          height: adaptView(100.0, 50.0),
+          child: FloatingActionButton(
+            child: Icon(
+              Icons.camera,
+              color: Colors.black,
+              size: adaptView(50.0, 30.0)
+            ),
+            backgroundColor: Colors.white,
+            onPressed: () {
+              _onCapturePressed(context);
+            },
           ),
-          backgroundColor: Colors.white,
-          onPressed: () {
-            _onCapturePressed(context);
-          },
         ),
       ),
     );
@@ -169,13 +179,14 @@ class _CameraScreenState extends State {
           icon: Icon(
             _getCameraLensIcon(lensDirection),
             color: Colors.white,
-            size: 24,
+            size: adaptView(50.0, 26.0),
           ),
           label: Text(
             '${(lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase() == "BACK") ? "FRONT" : "BACK"}',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
+              fontSize: adaptView(25.0, 15.0)
             ),
           ),
         ),
