@@ -27,18 +27,18 @@ class PreviewScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        height: rowHeight(),
+        height: adaptView(150.0, 100.0),
         color: Colors.black,
         child: Row(
           children: <Widget>[
             Container(
-              height: heightButton(),
-              width: widthButton(),
+              height: adaptView(100.0, 50.0),
+              width: adaptView(100.0, 50.0),
               child: FloatingActionButton(
                   backgroundColor: Colors.white,
                   child: Icon(
                     Icons.check,
-                    size: buttonSizeGallery(),
+                    size: adaptView(80.0, 30.0),
                     color: Colors.black,
                   ),
                   onPressed: () {

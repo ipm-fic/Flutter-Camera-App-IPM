@@ -29,10 +29,10 @@ class _OutputScreenState extends State<OutputScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(appBarHeight()),
+        preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
         child: AppBar(
           centerTitle: true,
-          title: Container(child: Text('Análisis de colores', style: TextStyle(fontSize: fontSize()),)),
+          title: Container(child: Text('Análisis de colores', style: TextStyle(fontSize: adaptView(35.0, 20.0)),)),
         ),
       ),
       body: Column(

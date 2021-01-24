@@ -76,7 +76,7 @@ class _CameraScreenState extends State {
           child: Icon(
             Icons.photo_library_rounded,
             color: Colors.white,
-            size: buttonSize(),
+            size: adaptView(50.0, 30.0),
           ),
         ),
       ),
@@ -100,7 +100,7 @@ class _CameraScreenState extends State {
               Align(
                   alignment: Alignment.center,
                   child: Container(
-                    height: rowHeight(),
+                    height: adaptView(150.0, 100.0),
                     //width: double.infinity,
                     //padding: EdgeInsets.all(15),
                     color: Colors.black,
@@ -146,13 +146,13 @@ class _CameraScreenState extends State {
       child: Align(
         alignment: Alignment.center,
         child: Container(
-          width: widthButton(),
-          height: heightButton(),
+          width: adaptView(100.0, 50.0),
+          height: adaptView(100.0, 50.0),
           child: FloatingActionButton(
             child: Icon(
               Icons.camera,
               color: Colors.black,
-              size: buttonSize()
+              size: adaptView(50.0, 30.0)
             ),
             backgroundColor: Colors.white,
             onPressed: () {
@@ -179,14 +179,14 @@ class _CameraScreenState extends State {
           icon: Icon(
             _getCameraLensIcon(lensDirection),
             color: Colors.white,
-            size: buttonSizeToggle(),
+            size: adaptView(50.0, 26.0),
           ),
           label: Text(
             '${(lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase() == "BACK") ? "FRONT" : "BACK"}',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
-              fontSize: fontSizeCamera()
+              fontSize: adaptView(25.0, 15.0)
             ),
           ),
         ),

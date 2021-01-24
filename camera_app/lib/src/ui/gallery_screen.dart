@@ -41,12 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar:PreferredSize(
-        preferredSize: Size.fromHeight(appBarHeight()),
+        preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
         child: AppBar(
             title: Text(widget.title,
               textAlign: TextAlign.justify,
               style: TextStyle(
-                fontSize: fontSize(),
+                fontSize: adaptView(35.0, 20.0),
               ),
             ),
             actions: <Widget>[
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   icon: Icon(
                     Icons.add_box,
                     color: Colors.white,
-                    size: buttonSize(),
+                    size: adaptView(50.0, 30.0),
                   ),
                 ),
               ),
@@ -72,8 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _stringOrPic(context),
       ),
       floatingActionButton: Container(
-        height: heightButton(),
-        width: widthButton(),
+        height: adaptView(100.0, 50.0),
+        width: adaptView(100.0, 50.0),
         child: FloatingActionButton(
           onPressed: () {
             checkPermissionsCamera(context);
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Icon(
             CupertinoIcons.right_chevron,
             color: Colors.black,
-            size: buttonSize(),
+            size: adaptView(50.0, 30.0),
           ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.

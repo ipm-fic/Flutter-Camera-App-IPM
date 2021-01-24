@@ -53,8 +53,8 @@ Widget createView(int n, List<Color> colors, List<String> res) {
       child: Column(
         children: <Widget>[
           Container(
-            width: widthButton(),
-            height: heightButton(),
+            width: adaptView(100.0, 50.0),
+            height: adaptView(100.0, 50.0),
             child: Padding(
               padding: const EdgeInsets.only(bottom: 3),
               child: MaterialButton(
@@ -69,7 +69,7 @@ Widget createView(int n, List<Color> colors, List<String> res) {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontSize: fontSize(),
+              fontSize: adaptView(35.0, 20.0),
             ),
           )
         ],
@@ -78,7 +78,7 @@ Widget createView(int n, List<Color> colors, List<String> res) {
   } else {
     return Text(
       res[n],
-      style: TextStyle(color: Colors.white, fontSize: fontSizeCamera()),
+      style: TextStyle(color: Colors.white, fontSize: adaptView(25.0, 15.0)),
     );
   }
 }

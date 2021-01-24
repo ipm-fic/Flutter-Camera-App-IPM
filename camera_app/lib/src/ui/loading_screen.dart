@@ -12,7 +12,7 @@ class LoadingScreen extends StatelessWidget {
       body: Center(
           child: Icon(
         Icons.camera,
-        size: buttonSizeLoading(),
+        size: adaptView(150.0, 80.0),
         color: Colors.white,
       )),
     );
