@@ -8,7 +8,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Camera App',
       theme: ThemeData(
-        primaryColor: Colors.black,
+        primaryColor: Color(0xff1c1c1c),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: LoadingScreen(),

@@ -30,9 +30,9 @@ class _OutputScreenState extends State<OutputScreen> {
       DeviceOrientation.landscapeLeft
     ]);
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff121212),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
+        preferredSize: Size.fromHeight(adaptView(65.0, 40.0)),
         child: AppBar(
           centerTitle: true,
           title: Container(

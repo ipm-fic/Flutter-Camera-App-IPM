@@ -44,9 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
       DeviceOrientation.landscapeLeft
     ]);
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff121212),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
+        preferredSize: Size.fromHeight(adaptView(65.0, 40.0)),
         child: AppBar(
           title: Text(
             widget.title,
@@ -55,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               fontSize: adaptView(35.0, 20.0),
             ),
           ),
+          elevation: 4,
           actions: <Widget>[
             Padding(
               padding: EdgeInsets.only(right: adaptView(30.0, 15.0)),
@@ -86,10 +87,11 @@ class _MyHomePageState extends State<MyHomePage> {
           tooltip: 'Hacer foto',
           backgroundColor: Colors.white,
           child: Icon(
-            CupertinoIcons.right_chevron,
+            CupertinoIcons.photo_camera_solid,
             color: Colors.black,
-            size: adaptView(50.0, 30.0),
+            size: adaptView(34.0, 20.0),
           ),
+          elevation: 6,
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -101,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.all(20),
         child: Center(
           child: Text(
-            "Utiliza el botón (+) para añadir fotos o pulsa el icono con la flecha"
+            "Utiliza el botón (+) para añadir fotos o pulsa el icono con la cámara"
             " para realizar una nueva foto.",
             textAlign: TextAlign.center,
             style: TextStyle(

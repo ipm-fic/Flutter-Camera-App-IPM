@@ -12,9 +12,14 @@ class PreviewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown,DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft
+    ]);
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff121212),
       appBar: AppBar(),
       body: Container(
         child: Align(
@@ -26,13 +31,14 @@ class PreviewScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         height: adaptView(150.0, 100.0),
-        color: Colors.black,
+        color: Color(0xff121212),
         child: Row(
           children: <Widget>[
             Container(
               height: adaptView(100.0, 50.0),
               width: adaptView(100.0, 50.0),
               child: FloatingActionButton(
+                  elevation: 0,
                   backgroundColor: Colors.white,
                   child: Icon(
                     Icons.check,

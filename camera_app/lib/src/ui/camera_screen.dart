@@ -86,7 +86,7 @@ class _CameraScreenState extends State {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff121212),
       body: Container(
         child: SafeArea(
           child: Column(
@@ -100,7 +100,7 @@ class _CameraScreenState extends State {
                 alignment: Alignment.center,
                 child: Container(
                   height: adaptView(150.0, 100.0),
-                  color: Colors.black,
+                  color: Color(0xff121212),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
@@ -147,6 +147,7 @@ class _CameraScreenState extends State {
           width: adaptView(100.0, 50.0),
           height: adaptView(100.0, 50.0),
           child: FloatingActionButton(
+            elevation: 0,
             child: Icon(Icons.camera,
                 color: Colors.black, size: adaptView(50.0, 30.0)),
             backgroundColor: Colors.white,

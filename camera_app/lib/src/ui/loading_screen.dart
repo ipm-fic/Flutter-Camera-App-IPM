@@ -8,7 +8,7 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     _gotoHome(context);
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff121212),
       body: Center(
         child: Icon(
           Icons.camera,
