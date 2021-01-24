@@ -53,7 +53,6 @@ class ColorsProvider {
       } else if (streamedResponse.statusCode == HttpStatus.forbidden) {
         return "Prohibido";
       } else {
-        print("${streamedResponse.statusCode}");
         return "Interno";
       }
     } on TimeoutException catch (_) {

@@ -5,10 +5,8 @@ import 'package:flutter/material.dart';
 
 class PreviewScreen extends StatelessWidget {
   final String imgPath;
-  final double aspectRatio;
 
-  const PreviewScreen({Key key, this.imgPath, this.aspectRatio})
-      : super(key: key);
+  const PreviewScreen({Key key, this.imgPath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

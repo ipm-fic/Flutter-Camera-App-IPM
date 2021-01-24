@@ -220,7 +220,6 @@ class _CameraScreenState extends State {
             MaterialPageRoute(
               builder: (context) => PreviewScreen(
                 imgPath: file.path,
-                aspectRatio: controller.value.aspectRatio,
               ),
             ),
           );

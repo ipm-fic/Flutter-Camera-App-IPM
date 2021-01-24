@@ -13,8 +13,6 @@ class OutputScreen extends StatefulWidget {
 }
 
 class _OutputScreenState extends State<OutputScreen> {
-  Future<String> futureString;
-
   @override
   void initState() {
     super.initState();
@@ -65,7 +63,6 @@ class _OutputScreenState extends State<OutputScreen> {
   }
 
   Widget exceptionChecker(String data, BuildContext context) {
-    print(data);
     if (!data.startsWith("{")) {
       return _onError(data);
     } else
