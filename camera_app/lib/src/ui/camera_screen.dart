@@ -1,4 +1,5 @@
 import 'package:camera/camera.dart';
+import 'package:camera_app/src/resources/sizeable.dart';
 import 'package:camera_app/src/ui/gallery_screen.dart';
 import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,7 +21,6 @@ class _CameraScreenState extends State {
   @override
   void initState() {
     super.initState();
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     availableCameras().then((availableCameras) {
       cameras = availableCameras;
 
@@ -76,7 +76,7 @@ class _CameraScreenState extends State {
           child: Icon(
             Icons.photo_library_rounded,
             color: Colors.white,
-            size: 38,
+            size: buttonSize(),
           ),
         ),
       ),
@@ -85,6 +85,7 @@ class _CameraScreenState extends State {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return Scaffold(
       backgroundColor: Colors.black,
       body: Container(
@@ -99,7 +100,7 @@ class _CameraScreenState extends State {
               Align(
                   alignment: Alignment.center,
                   child: Container(
-                    height: 100,
+                    height: rowHeight(),
                     //width: double.infinity,
                     //padding: EdgeInsets.all(15),
                     color: Colors.black,
@@ -144,15 +145,20 @@ class _CameraScreenState extends State {
     return Expanded(
       child: Align(
         alignment: Alignment.center,
-        child: FloatingActionButton(
-          child: Icon(
-            Icons.camera,
-            color: Colors.black,
+        child: Container(
+          width: widthButton(),
+          height: heightButton(),
+          child: FloatingActionButton(
+            child: Icon(
+              Icons.camera,
+              color: Colors.black,
+              size: buttonSize()
+            ),
+            backgroundColor: Colors.white,
+            onPressed: () {
+              _onCapturePressed(context);
+            },
           ),
-          backgroundColor: Colors.white,
-          onPressed: () {
-            _onCapturePressed(context);
-          },
         ),
       ),
     );
@@ -173,13 +179,14 @@ class _CameraScreenState extends State {
           icon: Icon(
             _getCameraLensIcon(lensDirection),
             color: Colors.white,
-            size: 24,
+            size: buttonSizeToggle(),
           ),
           label: Text(
             '${(lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase() == "BACK") ? "FRONT" : "BACK"}',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
+              fontSize: fontSizeCamera()
             ),
           ),
         ),

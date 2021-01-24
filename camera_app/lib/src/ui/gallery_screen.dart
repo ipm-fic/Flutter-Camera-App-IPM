@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:camera_app/src/resources/gallery_images.dart';
+import 'package:camera_app/src/resources/sizeable.dart';
 import 'package:camera_app/src/ui/preview_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'camera_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
+import 'package:flutter/services.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -34,57 +35,18 @@ class _MyHomePageState extends State<MyHomePage> {
     readData();
   }
 
-  double _fontSize (){
-    if (Device.get().isTablet){
-      return 35;
-    } else {
-      return 20;
-    }
-  }
-
-  double _buttonSize(){
-    if (Device.get().isTablet){
-      return 50;
-    } else {
-      return 30;
-    }
-  }
-
-  double _appBarHeight(){
-    if(Device.get().isTablet){
-      return 80;
-    } else{
-      return 40;
-    }
-  }
-
-  double _heightButton(){
-    if(Device.get().isTablet){
-      return 100;
-    } else {
-      return 50;
-    }
-  }
-
-  double _widthButton(){
-    if(Device.get().isTablet){
-      return 100;
-    } else {
-      return 50;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown,DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
     return Scaffold(
       backgroundColor: Colors.black,
       appBar:PreferredSize(
-        preferredSize: Size.fromHeight(_appBarHeight()),
+        preferredSize: Size.fromHeight(appBarHeight()),
         child: AppBar(
             title: Text(widget.title,
               textAlign: TextAlign.justify,
               style: TextStyle(
-                fontSize: _fontSize(),
+                fontSize: fontSize(),
               ),
             ),
             actions: <Widget>[
@@ -97,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   icon: Icon(
                     Icons.add_box,
                     color: Colors.white,
-                    size: _buttonSize(),
+                    size: buttonSize(),
                   ),
                 ),
               ),
@@ -110,8 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _stringOrPic(context),
       ),
       floatingActionButton: Container(
-        height: _heightButton(),
-        width: _widthButton(),
+        height: heightButton(),
+        width: widthButton(),
         child: FloatingActionButton(
           onPressed: () {
             checkPermissionsCamera(context);
@@ -121,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Icon(
             CupertinoIcons.right_chevron,
             color: Colors.black,
-            size: _buttonSize(),
+            size: buttonSize(),
           ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.

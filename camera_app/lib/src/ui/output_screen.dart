@@ -1,8 +1,9 @@
 import 'package:camera_app/src/blocs/colorsBloc.dart';
 import 'package:camera_app/src/models/endPointParser.dart';
+import 'package:camera_app/src/resources/sizeable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
+import 'package:flutter/services.dart';
 
 class OutputScreen extends StatefulWidget {
   final String imgPath;
@@ -24,11 +25,15 @@ class _OutputScreenState extends State<OutputScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown,DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text('Análisis de los colores'),
-        shadowColor: Colors.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(appBarHeight()),
+        child: AppBar(
+          centerTitle: true,
+          title: Container(child: Text('Análisis de colores', style: TextStyle(fontSize: fontSize()),)),
+        ),
       ),
       body: Column(
         children: <Widget>[
