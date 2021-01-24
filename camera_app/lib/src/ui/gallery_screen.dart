@@ -37,36 +37,41 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown,DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft
+    ]);
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar:PreferredSize(
+      appBar: PreferredSize(
         preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
         child: AppBar(
-            title: Text(widget.title,
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                fontSize: adaptView(35.0, 20.0),
-              ),
+          title: Text(
+            widget.title,
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+              fontSize: adaptView(35.0, 20.0),
             ),
-            actions: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: IconButton(
-                  onPressed: () {
-                    checkPermissionsGallery(context);
-                  },
-                  icon: Icon(
-                    Icons.add_box,
-                    color: Colors.white,
-                    size: adaptView(50.0, 30.0),
-                  ),
+          ),
+          actions: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(right: adaptView(30.0, 15.0)),
+              child: IconButton(
+                onPressed: () {
+                  checkPermissionsGallery(context);
+                },
+                icon: Icon(
+                  Icons.add_box,
+                  color: Colors.white,
+                  size: adaptView(50.0, 30.0),
                 ),
               ),
-            ],
-            centerTitle: true,
-            //shadowColor: Colors.white24,
-          ),
+            ),
+          ],
+          centerTitle: true,
+        ),
       ),
       body: SafeArea(
         child: _stringOrPic(context),
@@ -99,7 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
             "Utiliza el botón (+) para añadir fotos o pulsa el icono con la flecha"
             " para realizar una nueva foto.",
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white, height: 1.8),
+            style: TextStyle(
+              color: Colors.white,
+              height: 1.8,
+              fontSize: adaptView(22.0, 15.0),
+            ),
           ),
         ),
       );
@@ -162,11 +171,13 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           onTap: () {
             Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => PreviewScreen(
-                          imgPath: _imagesList[index].imagePath,
-                        )));
+              context,
+              MaterialPageRoute(
+                builder: (context) => PreviewScreen(
+                  imgPath: _imagesList[index].imagePath,
+                ),
+              ),
+            );
           },
           child: Container(
             decoration: BoxDecoration(

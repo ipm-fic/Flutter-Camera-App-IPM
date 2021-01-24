@@ -6,7 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class CameraScreen extends StatefulWidget {
   @override
   _CameraScreenState createState() => _CameraScreenState();
@@ -98,22 +97,21 @@ class _CameraScreenState extends State {
                 child: _cameraPreviewWidget(),
               ),
               Align(
-                  alignment: Alignment.center,
-                  child: Container(
-                    height: adaptView(150.0, 100.0),
-                    //width: double.infinity,
-                    //padding: EdgeInsets.all(15),
-                    color: Colors.black,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: <Widget>[
-                        _cameraToggleRowWidget(),
-                        _cameraControlWidget(context),
-                        _rowGalleryButton()
-                      ],
-                    ),
-                  ))
+                alignment: Alignment.center,
+                child: Container(
+                  height: adaptView(150.0, 100.0),
+                  color: Colors.black,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      _cameraToggleRowWidget(),
+                      _cameraControlWidget(context),
+                      _rowGalleryButton()
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
@@ -149,11 +147,8 @@ class _CameraScreenState extends State {
           width: adaptView(100.0, 50.0),
           height: adaptView(100.0, 50.0),
           child: FloatingActionButton(
-            child: Icon(
-              Icons.camera,
-              color: Colors.black,
-              size: adaptView(50.0, 30.0)
-            ),
+            child: Icon(Icons.camera,
+                color: Colors.black, size: adaptView(50.0, 30.0)),
             backgroundColor: Colors.white,
             onPressed: () {
               _onCapturePressed(context);
@@ -184,10 +179,9 @@ class _CameraScreenState extends State {
           label: Text(
             '${(lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1).toUpperCase() == "BACK") ? "FRONT" : "BACK"}',
             style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontSize: adaptView(25.0, 15.0)
-            ),
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontSize: adaptView(25.0, 15.0)),
           ),
         ),
       ),

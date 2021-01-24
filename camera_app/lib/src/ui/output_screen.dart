@@ -23,14 +23,24 @@ class _OutputScreenState extends State<OutputScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown,DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft
+    ]);
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(adaptView(80.0, 40.0)),
         child: AppBar(
           centerTitle: true,
-          title: Container(child: Text('Análisis de colores', style: TextStyle(fontSize: adaptView(35.0, 20.0)),)),
+          title: Container(
+            child: Text(
+              'Análisis de colores',
+              style: TextStyle(fontSize: adaptView(35.0, 20.0)),
+            ),
+          ),
         ),
       ),
       body: Column(
